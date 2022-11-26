@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}HeYOOKs{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+<h1>Welcome in HeYOOKs</h1>
+
+{% for post in articles %}
+ <div class="alert alert-info">
+    <h3>{{ post.title }}</h3>
+     <p>{{ post.content }}</p>
+    <small>User: {{ post.author }}</small>
+ </div>
+{% endfor %}
+</div>
+{% endblock %}

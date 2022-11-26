@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Add post{% endblock %}
+
+{% block content %}
+<div class="container-mt5">
+    <h1>Create your HeYOOK</h1>
+    <form action="/addposts" method="post">
+        <input type="text" name="title" id="title" placeholder="Title" class="form-control"><br>
+       <textarea name="content" id="content" placeholder="Content" class="form-control"></textarea><br>
+        <input type="text" name="author" placeholder="Author" class="form-control"><br>
+        <button class="btn btn-success">Add</button>
+    </form>
+
+</div>
+{% endblock %}

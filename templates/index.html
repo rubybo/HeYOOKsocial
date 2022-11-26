@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}HeYOOK{% endblock %}
+
+
+
+{% block content %}
+    <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">HeYOOK</h1>
+        <p class="lead text-muted">This is new social network, Beta version 0.0.1, yees we do it.</p>
+        <p>
+          <a href="/database" class="btn btn-primary my-2">Content</a>
+          <a href="/posts" class="btn btn-secondary my-2">Create first HeYOOK:)</a>
+        </p>
+      </div>
+<div class="row align-items-md-stretch">
+      <div class="col-md-6">
+        <div class="h-100 p-5 text-bg-dark rounded-3">
+          <h2>Donate</h2>
+          <p>Support the developers:)</p>
+         <a href="https://www.donationalerts.com/r/heyook"><button class="btn btn-outline-light" type="button">Donate</button></a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="h-100 p-5 bg-light border rounded-3">
+          <h2>GitHub</h2>
+          <p>This is developer's GitHub.</p>
+         <a href="https://github.com/rubybo"> <button class="btn btn-outline-secondary" type="button">GitHub</button></a>
+        </div>
+      </div>
+    </div>
+<hr>
+
+<h2>Last HeYOOKS</h2>
+<hr>
+{% for post in articles %}
+ <div class="alert alert-info">
+    <h3>{{ post.title }}</h3>
+     <p>{{ post.content }}</p>
+    <small>User: {{ post.author }}</small>
+ </div>
+{% endfor %}
+
+{% endblock %}
